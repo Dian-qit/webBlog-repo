@@ -1,3 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    color: #fff;
+    font-family: "Poppins", serif;
+    margin: 0;
+}
+
 body{
-    background-color: aqua;
+    background-image: url(/img/blog-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #1E1E1E;
+}
+
+.header{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 50px 50px;
+    grid-template-areas: 
+    "logo button"
+    "menu menu"
+    ;
+}
+
+
+
+@media only screen and (min-width: 786px) {
+    .header{
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+        "logo menu button";
+    }
+}
+
+.header__logo {
+    grid-area: logo;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.header__nav{
+    grid-area: menu;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.header__journey{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header__nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+.header__nav ul a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.header__button{
+    grid-area: button;
+    display: flex;
+    justify-content: end;
+}
+
+.blog{
+    display: flex;
+    padding: 200px 0;
+    justify-content: flex-end;
+}
+
+.blog__header{
+    padding: 0 50px 0 0 ;
+}
+
+.blog__heading{
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.blog__body{
+    font-size: 32px;
+    width: 60%;
+    
+}
+
+.blog__button{
+   
+    display: flex;
+    position: relative ;
+    top: 200px;
+    left: 200px;
+    height: 220px;
+    width: 650px;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.blog__button a{
+    color: inherit;
+}
+
+.blog__button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+.blog a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+
+.blog_rectangle-3{
+    background-color: #2D2D2D;
+    width: 300px;
+    height: 498px;
+    position: relative;
+    left: 0; 
+    
+}
+
+.sidebar{
+    background-color: rgba(0, 0, 0, 0.297); 
+    backdrop-filter: blur(10px);
+    padding: 75px;
+    width: 400px ;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.blog__info{
+    padding: 25px 20px;
+}
+
+.blog__info h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.blog__info p{
+    font-size: 18px;
+    font-weight: 400;
+    width: 80%;
 }
