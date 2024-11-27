@@ -186,4 +186,13 @@ body{
         align-items: center;
         justify-content: center;
     }
+
+    .blog__header{
+        grid-area: 2 / 2 / 2 / 10;
+    }
+
+    .blog__start{
+        font-size: 20px;
+        grid-area: 7  / 4 / 4 / 13;
+    }
 }
