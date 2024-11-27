@@ -196,3 +196,41 @@ body{
         grid-area: 7  / 4 / 4 / 13;
     }
 }
+
+
+.searchBar{
+    display: none;
+}
+
+/* Home Article List */
+.articles__heading {
+    margin-top: 4rem;
+    font-weight: 400;
+  }
+  
+  .article-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .article-list__date {
+    font-size: 1rem;
+    color: var(--gray);
+    width: 100px;
+    display: inline-block;
+    width: 260px;
+  }
+  
+  .article-ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: 18px 0;
+  }
+
+  
