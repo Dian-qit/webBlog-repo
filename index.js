@@ -1,9 +1,24 @@
+require('dotenv').config();
+
 const express = require('express');
-const expressLayouts = require('express-ejs-layouts');
-const app = require('./app');  // Import your main app configuration
+const expressLayout = require('express-ejs-layouts');
 
-const port = process.env.PORT || 3000;
+const connectDB = require('./server/config/db');
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+const app  = express();
+const PORT = process.env.PORT || 5000;
+ 
+
+connectDB();
+
+app.use(express.static('public'));
+
+app.use(expressLayout);
+app.set('layout', './layouts/main');
+app.set('view engine', 'ejs');
+ 
+app.use('/', require('./server/routes/main'));
+
+app.listen(PORT, ()=> {
+    console.log(`App listening to port ${PORT}`);
 });
