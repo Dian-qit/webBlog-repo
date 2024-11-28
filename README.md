@@ -1,4 +1,4 @@
-Here’s a tailored version for your new project:
+
 
 ---
 
