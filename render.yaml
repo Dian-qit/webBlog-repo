@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: blog
+    runtime: node
+    buildCommand: npm install
+    startCommand: node app.js
+    envVars:
+      - key: NODE_VERSION
+        value: 18.x
